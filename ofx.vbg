@@ -1,0 +1,6 @@
+VBGROUP 5.0
+Project=.\RunVBUnit\OfxTestRunner.vbp
+Project=.\RunVBUnit\OfxRunVBUnit.vbp
+Project=.\MainLogic\OfxCore.vbp
+Project=.\CUI\OfxCui.vbp
+StartupProject=.\GUI\OfxGui.vbp

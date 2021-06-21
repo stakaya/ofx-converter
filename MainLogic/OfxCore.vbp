@@ -1,0 +1,44 @@
+Type=OleDll
+Module=modErrorHandling; modErrorHandling.bas
+Module=modClassIDGenerator; modClassIDGenerator.bas
+Class=Ofx; Ofx.cls
+Class=Logger; Logger.cls
+Class=IniFile; IniFile.cls
+Startup="(None)"
+HelpFile=""
+Title="OfxPackage"
+ExeName32="Ofx.dll"
+Command32=""
+Name="OfxCore"
+HelpContextID="0"
+CompatibleMode="1"
+CompatibleEXE32="Ofx.dll"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName=""
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=1
+Unattended=-1
+Retained=1
+ThreadPerObject=0
+MaxNumberOfThreads=1
+DebugStartupOption=0
+
+[MS Transaction Server]
+AutoRefresh=1
+
+[RVB]
+DeleteClass2=
+DeleteClass1=

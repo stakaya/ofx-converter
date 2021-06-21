@@ -1,0 +1,1313 @@
+
+(object Petal
+    version    	42
+    _written   	"Microsoft Visual Modeler 2.0.8131"
+    charSet    	128)
+
+(object Design "論理ﾋﾞｭｰ"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"47B0A1F80104"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	9
+	    face       	"ＭＳ Ｐゴシック"
+	    charSet    	128
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "ﾕｰｽ ｹｰｽ ﾋﾞｭｰ"
+	quid       	"47B0A1F80106"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"47B0A1F802C8"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "論理ﾋﾞｭｰ"
+	quid       	"47B0A1F80105"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"ｺﾝﾎﾟｰﾈﾝﾄ ﾋﾞｭｰ"
+	quidu      	"47B0A1F80107"
+	logical_models 	(list unit_reference_list
+	    (object Class_Category "ﾕｰｻﾞｰ ｻｰﾋﾞｽ"
+		attributes 	(list Attribute_Set
+		    (object Attribute
+			tool       	"VisualBasic"
+			name       	"TierPackage"
+			value      	"User Services"))
+		quid       	"47B0A1F802E5"
+		documentation 	"ﾕｰｻﾞｰ ｻｰﾋﾞｽはｱﾌﾟﾘｹｰｼｮﾝ中の情報表示およびﾃﾞｰﾀ編集のﾋﾞｼﾞｭｱﾙ ｲﾝﾀﾌｪｰｽを提供し、ﾕｰｻﾞとｱﾌﾟﾘｹｰｼｮﾝを結び付け、ﾕｰｻﾞｰﾞがﾋﾞｼﾞﾈｽ ﾀｽｸを実行するのに必要なﾋﾞｼﾞﾈｽとﾃﾞｰﾀ ｻｰﾋﾞｽを表します。"
+		visible_categories 	(list visibility_relationship_list
+		    (object Visibility_Relationship
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VisualBasic"
+				name       	"TierPackage"
+				value      	"Business Services"))
+			quid       	"47B0A1F802EB"
+			supplier   	"論理ﾋﾞｭｰ::ﾋﾞｼﾞﾈｽ ｻｰﾋﾞｽ"
+			quidu      	"47B0A1F802E7")
+		    (object Visibility_Relationship
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VisualBasic"
+				name       	"TierPackage"
+				value      	"Data Services"))
+			quid       	"47B0A1F802EC"
+			supplier   	"論理ﾋﾞｭｰ::ﾃﾞｰﾀ ｻｰﾋﾞｽ"
+			quidu      	"47B0A1F802E9"))
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list)
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "ﾊﾟｯｹｰｼﾞ概要"
+			quid       	"47B0A1F802E6"
+			title      	"ﾊﾟｯｹｰｼﾞ概要"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list))))
+	    (object Class_Category "ﾋﾞｼﾞﾈｽ ｻｰﾋﾞｽ"
+		attributes 	(list Attribute_Set
+		    (object Attribute
+			tool       	"VisualBasic"
+			name       	"TierPackage"
+			value      	"Business Services"))
+		quid       	"47B0A1F802E7"
+		documentation 	"ﾋﾞｼﾞﾈｽ ｻｰﾋﾞｽはﾋﾞｼﾞﾈｽﾀｽｸを実行するためのﾕｰｻﾞｰ（あるいは他のﾋﾞｼﾞﾈｽ ｻｰﾋﾞｽ）からの要求に対応します。それらは必要なﾃﾞｰﾀ ｻｰﾋﾞｽを要求し、正当な手続きとﾋﾞｼﾞﾈｽﾙｰﾙを適当なﾃﾞｰﾀに適用することによってなされます。このﾌﾟﾛﾄｺﾙにより、ﾕｰｻﾞｰﾞが直接ﾃﾞｰﾀﾍﾞｰｽに作用することは防げます。ﾋﾞｼﾞﾈｽ ﾙｰﾙは、あるｻﾎﾟｰﾄされたﾋﾞｼﾞﾈｽ ﾀｽｸよりも頻繁に変化する傾向があるため、それらはｱﾌﾟﾘｹｰｼｮﾝ ﾛｼﾞｯｸそのものとは物理的に隔離されたｺﾝﾎﾟｰﾈﾝﾄにｶﾌﾟｾﾙ化するのが望ましいと思われます。"
+		visible_categories 	(list visibility_relationship_list
+		    (object Visibility_Relationship
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VisualBasic"
+				name       	"TierPackage"
+				value      	"User Services"))
+			quid       	"47B0A1F802ED"
+			supplier   	"論理ﾋﾞｭｰ::ﾕｰｻﾞｰ ｻｰﾋﾞｽ"
+			quidu      	"47B0A1F802E5")
+		    (object Visibility_Relationship
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VisualBasic"
+				name       	"TierPackage"
+				value      	"Data Services"))
+			quid       	"47B0A1F802EE"
+			supplier   	"論理ﾋﾞｭｰ::ﾃﾞｰﾀ ｻｰﾋﾞｽ"
+			quidu      	"47B0A1F802E9"))
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list)
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "ﾊﾟｯｹｰｼﾞ概要"
+			quid       	"47B0A1F802E8"
+			title      	"ﾊﾟｯｹｰｼﾞ概要"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list))))
+	    (object Class_Category "ﾃﾞｰﾀ ｻｰﾋﾞｽ"
+		attributes 	(list Attribute_Set
+		    (object Attribute
+			tool       	"VisualBasic"
+			name       	"TierPackage"
+			value      	"Data Services"))
+		quid       	"47B0A1F802E9"
+		documentation 	"ﾃﾞｰﾀ ｻｰﾋﾞｽはﾃﾞｰﾀの維持、ｱｸｾｽ、ｱｯﾌﾟﾃﾞｰﾄを行います。また、ﾋﾞｼﾞﾈｽｻｰﾋﾞｽによって初期化されたﾃﾞｰﾀを操作する要求を管理実行します。ﾃﾞｰﾀ ｻｰﾋﾞｽの分割により、ﾃﾞｰﾀ構造やｱｸｾｽ機構を、ﾕｰｻﾞｰやﾋﾞｼﾞﾈｽ ｻｰﾋﾞｽに影響を与えることなくﾒﾝﾃﾅﾝｽ、修正、再構築することが可能になります。"
+		visible_categories 	(list visibility_relationship_list
+		    (object Visibility_Relationship
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VisualBasic"
+				name       	"TierPackage"
+				value      	"User Services"))
+			quid       	"47B0A1F802EF"
+			supplier   	"論理ﾋﾞｭｰ::ﾕｰｻﾞｰ ｻｰﾋﾞｽ"
+			quidu      	"47B0A1F802E5")
+		    (object Visibility_Relationship
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VisualBasic"
+				name       	"TierPackage"
+				value      	"Data Services"))
+			quid       	"47B0A1F802F0"
+			supplier   	"論理ﾋﾞｭｰ::ﾋﾞｼﾞﾈｽ ｻｰﾋﾞｽ"
+			quidu      	"47B0A1F802E7"))
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list)
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "ﾊﾟｯｹｰｼﾞ概要"
+			quid       	"47B0A1F802EA"
+			title      	"ﾊﾟｯｹｰｼﾞ概要"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object ClassView "ClassUtility" "論理ﾋﾞｭｰ::未割り当て::modErrorHandling" @1
+				ShowCompartmentStereotypes 	TRUE
+				location   	(272, 144)
+				label      	(object ItemLabel
+				    Parent_View 	@1
+				    location   	(114, 102)
+				    nlines     	1
+				    max_width  	316
+				    justify    	0
+				    label      	"modErrorHandling")
+				stereotype 	(object ItemLabel
+				    Parent_View 	@1
+				    location   	(114, 64)
+				    anchor     	10
+				    nlines     	1
+				    max_width  	316
+				    justify    	0
+				    label      	"<<Module>>")
+				icon_style 	"Icon"
+				quidu      	"47B0A21702B9"
+				width      	334
+				height     	178
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "ClassUtility" "論理ﾋﾞｭｰ::未割り当て::modClassIDGenerator" @2
+				ShowCompartmentStereotypes 	TRUE
+				location   	(800, 144)
+				label      	(object ItemLabel
+				    Parent_View 	@2
+				    location   	(608, 102)
+				    nlines     	1
+				    max_width  	384
+				    justify    	0
+				    label      	"modClassIDGenerator")
+				stereotype 	(object ItemLabel
+				    Parent_View 	@2
+				    location   	(608, 64)
+				    anchor     	10
+				    nlines     	1
+				    max_width  	384
+				    justify    	0
+				    label      	"<<Module>>")
+				icon_style 	"Icon"
+				quidu      	"47B0A2170308"
+				width      	402
+				height     	178
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "論理ﾋﾞｭｰ::未割り当て::Logger" @3
+				ShowCompartmentStereotypes 	TRUE
+				location   	(224, 448)
+				label      	(object ItemLabel
+				    Parent_View 	@3
+				    location   	(78, 406)
+				    nlines     	1
+				    max_width  	292
+				    justify    	0
+				    label      	"Logger")
+				stereotype 	(object ItemLabel
+				    Parent_View 	@3
+				    location   	(78, 368)
+				    anchor     	10
+				    nlines     	1
+				    max_width  	290
+				    justify    	0
+				    label      	"<<Class Module>>")
+				icon_style 	"Icon"
+				quidu      	"47B0A21703A8"
+				width      	310
+				height     	178
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "論理ﾋﾞｭｰ::未割り当て::Ofx" @4
+				ShowCompartmentStereotypes 	TRUE
+				location   	(768, 448)
+				label      	(object ItemLabel
+				    Parent_View 	@4
+				    location   	(622, 406)
+				    nlines     	1
+				    max_width  	292
+				    justify    	0
+				    label      	"Ofx")
+				stereotype 	(object ItemLabel
+				    Parent_View 	@4
+				    location   	(622, 368)
+				    anchor     	10
+				    nlines     	1
+				    max_width  	290
+				    justify    	0
+				    label      	"<<Class Module>>")
+				icon_style 	"Icon"
+				quidu      	"47B0A2170330"
+				width      	310
+				height     	178
+				annotation 	8
+				autoResize 	TRUE)
+			    (object AssociationViewNew "" @5
+				location   	(495, 448)
+				stereotype 	TRUE
+				quidu      	"47B0A2170363"
+				roleview_list 	(list RoleViews
+				    (object RoleView "Log" @6
+					Parent_View 	@5
+					location   	(-257, -304)
+					label      	(object SegLabel @7
+					    Parent_View 	@6
+					    location   	(403, 407)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	72
+					    justify    	0
+					    label      	"-Log"
+					    pctDist    	0.800000
+					    height     	42
+					    orientation 	1)
+					stereotype 	TRUE
+					quidu      	"47B0A2170365"
+					client     	@5
+					supplier   	@3
+					line_style 	0)
+				    (object RoleView "" @8
+					Parent_View 	@5
+					location   	(-257, -304)
+					label      	(object SegLabel @9
+					    Parent_View 	@8
+					    location   	(589, 407)
+					    hidden     	TRUE
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	450
+					    justify    	0
+					    label      	""
+					    pctDist    	0.800000
+					    height     	42
+					    orientation 	0)
+					stereotype 	TRUE
+					quidu      	"47B0A2170364"
+					client     	@5
+					supplier   	@4
+					line_style 	0)))
+			    (object ClassView "Class" "論理ﾋﾞｭｰ::未割り当て::IniFile" @10
+				ShowCompartmentStereotypes 	TRUE
+				location   	(1328, 448)
+				label      	(object ItemLabel
+				    Parent_View 	@10
+				    location   	(1182, 406)
+				    nlines     	1
+				    max_width  	292
+				    justify    	0
+				    label      	"IniFile")
+				stereotype 	(object ItemLabel
+				    Parent_View 	@10
+				    location   	(1182, 368)
+				    anchor     	10
+				    nlines     	1
+				    max_width  	290
+				    justify    	0
+				    label      	"<<Class Module>>")
+				icon_style 	"Icon"
+				quidu      	"47B0A218007E"
+				width      	310
+				height     	178
+				annotation 	8
+				autoResize 	TRUE)
+			    (object AssociationViewNew "" @11
+				location   	(1047, 448)
+				stereotype 	TRUE
+				quidu      	"47B0A217036C"
+				roleview_list 	(list RoleViews
+				    (object RoleView "Ini" @12
+					Parent_View 	@11
+					location   	(295, -304)
+					label      	(object SegLabel @13
+					    Parent_View 	@12
+					    location   	(1147, 407)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	60
+					    justify    	0
+					    label      	"-Ini"
+					    pctDist    	0.800000
+					    height     	42
+					    orientation 	0)
+					stereotype 	TRUE
+					quidu      	"47B0A217036E"
+					client     	@11
+					supplier   	@10
+					line_style 	0)
+				    (object RoleView "" @14
+					Parent_View 	@11
+					location   	(295, -304)
+					label      	(object SegLabel @15
+					    Parent_View 	@14
+					    location   	(948, 407)
+					    hidden     	TRUE
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	450
+					    justify    	0
+					    label      	""
+					    pctDist    	0.800000
+					    height     	42
+					    orientation 	1)
+					stereotype 	TRUE
+					quidu      	"47B0A217036D"
+					client     	@11
+					supplier   	@4
+					line_style 	0)))))))
+	    (object Class_Category "未割り当て"
+		quid       	"47B0A21702B7"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class_Utility "modErrorHandling"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"OptionExplicit"
+				value      	FALSE))
+			quid       	"47B0A21702B9"
+			stereotype 	"Module"
+			operations 	(list Operations
+			    (object Operation "RaiseError"
+				quid       	"47B0A21702FE"
+				documentation 	
+|There are a number of methods for retrieving the error
+|message.  The following method uses a resource file to
+|retrieve strings indexed by the error number you are
+|raising.
+				
+				parameters 	(list Parameters
+				    (object Parameter "ErrorNumber"
+					type       	"Long")
+				    (object Parameter "Source"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "MyObjectError1"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"IsConst"
+					value      	TRUE))
+				quid       	"47B0A21702E9"
+				documentation 	
+| Define your custom errors here.  Be sure to use numbers
+| greater than 512, to avoid conflicts with OLE error numbers.
+				
+				initv      	"1000"
+				exportControl 	"Public")
+			    (object ClassAttribute "MyObjectError2"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"IsConst"
+					value      	TRUE))
+				quid       	"47B0A21702F3"
+				initv      	"1010"
+				exportControl 	"Public")
+			    (object ClassAttribute "MyObjectErrorN"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"IsConst"
+					value      	TRUE))
+				quid       	"47B0A21702F4"
+				initv      	"1234"
+				exportControl 	"Public")
+			    (object ClassAttribute "MyUnhandledError"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"IsConst"
+					value      	TRUE))
+				quid       	"47B0A21702F5"
+				initv      	"9999"
+				exportControl 	"Public"))
+			module     	"ｺﾝﾎﾟｰﾈﾝﾄ ﾋﾞｭｰ::OfxCore"
+			quidu      	"47B0A217028F"
+			language   	"Visual Basic")
+		    (object Class_Utility "modClassIDGenerator"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"OptionExplicit"
+				value      	FALSE))
+			quid       	"47B0A2170308"
+			stereotype 	"Module"
+			operations 	(list Operations
+			    (object Operation "GetNextClassDebugID"
+				quid       	"47B0A2170326"
+				result     	"Long"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			module     	"ｺﾝﾎﾟｰﾈﾝﾄ ﾋﾞｭｰ::OfxCore"
+			quidu      	"47B0A217028F"
+			language   	"Visual Basic")
+		    (object Class "Ofx"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Creatable"
+				value      	("CreatableSet" 220))
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"OptionExplicit"
+				value      	TRUE))
+			quid       	"47B0A2170330"
+			stereotype 	"Class Module"
+			operations 	(list Operations
+			    (object Operation "Convert"
+				quid       	"47B0A217036F"
+				parameters 	(list Parameters
+				    (object Parameter "InputFile"
+					type       	"String")
+				    (object Parameter "Optional OutputFile"
+					type       	"String"
+					initv      	
+|""
+					)
+				    (object Parameter "Optional IsUpdate"
+					type       	"Boolean"
+					initv      	"False"))
+				result     	"Boolean"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Class_Initialize"
+				quid       	"47B0A2170373"
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "Class_Terminate"
+				quid       	"47B0A2170376"
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "ClassDebugID"
+				quid       	"47B0A2170377"
+				stereotype 	"Get"
+				result     	"Long"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "mlClassDebugID"
+				quid       	"47B0A2170362"
+				documentation 	"で生成された連続するｸﾗｽIDを保持する局所変数 Class_Initialize"
+				type       	"Long"))
+			module     	"ｺﾝﾎﾟｰﾈﾝﾄ ﾋﾞｭｰ::OfxCore"
+			quidu      	"47B0A217028F"
+			language   	"Visual Basic")
+		    (object Class "Logger"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Creatable"
+				value      	("CreatableSet" 220))
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"OptionExplicit"
+				value      	TRUE))
+			quid       	"47B0A21703A8"
+			stereotype 	"Class Module"
+			operations 	(list Operations
+			    (object Operation "Class_Terminate"
+				quid       	"47B0A2180026"
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "Class_Initialize"
+				quid       	"47B0A218002E"
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "Trace"
+				quid       	"47B0A218002F"
+				parameters 	(list Parameters
+				    (object Parameter "LogMessage"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Dbug"
+				quid       	"47B0A2180031"
+				parameters 	(list Parameters
+				    (object Parameter "LogMessage"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Info"
+				quid       	"47B0A2180038"
+				parameters 	(list Parameters
+				    (object Parameter "LogMessage"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Warn"
+				quid       	"47B0A218003A"
+				parameters 	(list Parameters
+				    (object Parameter "LogMessage"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Error"
+				quid       	"47B0A2180042"
+				parameters 	(list Parameters
+				    (object Parameter "LogMessage"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Fatal"
+				quid       	"47B0A2180044"
+				parameters 	(list Parameters
+				    (object Parameter "LogMessage"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SetLogLevel"
+				quid       	"47B0A2180046"
+				parameters 	(list Parameters
+				    (object Parameter "Level"
+					type       	"Integer"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "name"
+				quid       	"47B0A218004C"
+				stereotype 	"Let"
+				parameters 	(list Parameters
+				    (object Parameter "ByVal NewValue"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "name"
+				quid       	"47B0A218004E"
+				stereotype 	"Get"
+				result     	"String"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "WriteLog"
+				quid       	"47B0A218004F"
+				parameters 	(list Parameters
+				    (object Parameter "LogType"
+					type       	"String")
+				    (object Parameter "LogMessage"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "ClassDebugID"
+				quid       	"47B0A2180058"
+				stereotype 	"Get"
+				result     	"Long"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "mlClassDebugID"
+				quid       	"47B0A21703E4"
+				documentation 	"で生成された連続するｸﾗｽIDを保持する局所変数 Class_Initialize"
+				type       	"Long")
+			    (object ClassAttribute "ALL_LEVEL"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"IsConst"
+					value      	TRUE))
+				quid       	"47B0A21703E5"
+				initv      	"0")
+			    (object ClassAttribute "TRACE_LEVEL"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"IsConst"
+					value      	TRUE))
+				quid       	"47B0A2180006"
+				initv      	"1")
+			    (object ClassAttribute "DBUG_LEVEL"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"IsConst"
+					value      	TRUE))
+				quid       	"47B0A2180007"
+				initv      	"2")
+			    (object ClassAttribute "INFO_LEVEL"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"IsConst"
+					value      	TRUE))
+				quid       	"47B0A2180010"
+				initv      	"3")
+			    (object ClassAttribute "WARN_LEVEL"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"IsConst"
+					value      	TRUE))
+				quid       	"47B0A2180011"
+				initv      	"4")
+			    (object ClassAttribute "FATAL_LEVEL"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"IsConst"
+					value      	TRUE))
+				quid       	"47B0A218001A"
+				initv      	"5")
+			    (object ClassAttribute "OFF_LEVEL"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"IsConst"
+					value      	TRUE))
+				quid       	"47B0A218001B"
+				initv      	"6")
+			    (object ClassAttribute "LogName"
+				quid       	"47B0A2180024"
+				type       	"String")
+			    (object ClassAttribute "LogLevel"
+				quid       	"47B0A2180025"
+				type       	"Integer"))
+			module     	"ｺﾝﾎﾟｰﾈﾝﾄ ﾋﾞｭｰ::OfxCore"
+			quidu      	"47B0A217028F"
+			language   	"Visual Basic")
+		    (object Class "IniFile"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Creatable"
+				value      	("CreatableSet" 220))
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"OptionExplicit"
+				value      	TRUE))
+			quid       	"47B0A218007E"
+			stereotype 	"Class Module"
+			operations 	(list Operations
+			    (object Operation "GetPrivateProfileInt"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"LibraryName"
+					value      	"Kernel32")
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"AliasName"
+					value      	"GetPrivateProfileIntA"))
+				quid       	"47B0A21800A6"
+				stereotype 	"Declare"
+				parameters 	(list Parameters
+				    (object Parameter "ByVal lpAppName"
+					type       	"String")
+				    (object Parameter "ByVal lpKeyName"
+					type       	"String")
+				    (object Parameter "ByVal nDefault"
+					type       	"Long")
+				    (object Parameter "ByVal lpFileName"
+					type       	"String"))
+				result     	"Long"
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "GetPrivateProfileString"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"LibraryName"
+					value      	"Kernel32")
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"AliasName"
+					value      	"GetPrivateProfileStringA"))
+				quid       	"47B0A21800B0"
+				stereotype 	"Declare"
+				parameters 	(list Parameters
+				    (object Parameter "ByVal lpAppName"
+					type       	"String")
+				    (object Parameter "ByVal lpKeyName"
+					type       	"String")
+				    (object Parameter "ByVal lpDefault"
+					type       	"String")
+				    (object Parameter "ByVal lpReturnedString"
+					type       	"String")
+				    (object Parameter "ByVal nSize"
+					type       	"Long")
+				    (object Parameter "ByVal lpFileName"
+					type       	"String"))
+				result     	"Long"
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "WritePrivateProfileString"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"LibraryName"
+					value      	"Kernel32")
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"AliasName"
+					value      	"WritePrivateProfileStringA"))
+				quid       	"47B0A21800B7"
+				stereotype 	"Declare"
+				parameters 	(list Parameters
+				    (object Parameter "ByVal lpAppName"
+					type       	"String")
+				    (object Parameter "ByVal lpKeyName"
+					type       	"String")
+				    (object Parameter "ByVal lpString"
+					type       	"String")
+				    (object Parameter "ByVal lpFileName"
+					type       	"String"))
+				result     	"Long"
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "Class_Terminate"
+				quid       	"47B0A21800BE"
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "Class_Initialize"
+				quid       	"47B0A21800BF"
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "ReadInteger"
+				quid       	"47B0A21800C4"
+				parameters 	(list Parameters
+				    (object Parameter "ByVal Section"
+					type       	"String")
+				    (object Parameter "ByVal Key"
+					type       	"String")
+				    (object Parameter "ByVal Default"
+					type       	"Long"))
+				result     	"Long"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "ReadString"
+				quid       	"47B0A21800C8"
+				parameters 	(list Parameters
+				    (object Parameter "ByVal Section"
+					type       	"String")
+				    (object Parameter "ByVal Key"
+					type       	"String")
+				    (object Parameter "ByVal Default"
+					type       	"String"))
+				result     	"String"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "WriteString"
+				quid       	"47B0A21800CF"
+				parameters 	(list Parameters
+				    (object Parameter "ByVal Section"
+					type       	"String")
+				    (object Parameter "ByVal Key"
+					type       	"String")
+				    (object Parameter "ByVal Value"
+					type       	"String"))
+				result     	"Boolean"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "ClassDebugID"
+				quid       	"47B0A21800D3"
+				stereotype 	"Get"
+				result     	"Long"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "IniFilePath"
+				quid       	"47B0A218009C"
+				type       	"String")
+			    (object ClassAttribute "mlClassDebugID"
+				quid       	"47B0A218009D"
+				documentation 	"で生成された連続するｸﾗｽIDを保持する局所変数 Class_Initialize"
+				type       	"Long"))
+			module     	"ｺﾝﾎﾟｰﾈﾝﾄ ﾋﾞｭｰ::OfxCore"
+			quidu      	"47B0A217028F"
+			language   	"Visual Basic")
+		    (object Association "$UNNAMED$0"
+			quid       	"47B0A2170363"
+			roles      	(list role_list
+			    (object Role "$UNNAMED$1"
+				quid       	"47B0A2170364"
+				supplier   	"論理ﾋﾞｭｰ::未割り当て::Ofx"
+				quidu      	"47B0A2170330")
+			    (object Role "Log"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"New"
+					value      	TRUE))
+				quid       	"47B0A2170365"
+				label      	"Log"
+				supplier   	"論理ﾋﾞｭｰ::未割り当て::Logger"
+				quidu      	"47B0A21703A8"
+				exportControl 	"Private"
+				is_navigable 	TRUE)))
+		    (object Association "$UNNAMED$2"
+			quid       	"47B0A217036C"
+			roles      	(list role_list
+			    (object Role "$UNNAMED$3"
+				quid       	"47B0A217036D"
+				supplier   	"論理ﾋﾞｭｰ::未割り当て::Ofx"
+				quidu      	"47B0A2170330")
+			    (object Role "Ini"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"New"
+					value      	TRUE))
+				quid       	"47B0A217036E"
+				label      	"Ini"
+				supplier   	"論理ﾋﾞｭｰ::未割り当て::IniFile"
+				quidu      	"47B0A218007E"
+				exportControl 	"Private"
+				is_navigable 	TRUE))))
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "ﾊﾟｯｹｰｼﾞ概要"
+			quid       	"47B0A21702B8"
+			title      	"ﾊﾟｯｹｰｼﾞ概要"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list)))))
+	logical_presentations 	(list unit_reference_list
+	    (object Tier_Diagram "3 階層ｻｰﾋﾞｽ ﾓﾃﾞﾙ"
+		quid       	"47B0A1F802F1"
+		title      	"3 階層ｻｰﾋﾞｽ ﾓﾃﾞﾙ"
+		documentation 	"3 階層ｱﾌﾟﾘｹｰｼｮﾝ ｱﾌﾟﾛｰﾁによって、ｸﾗｲｱﾝﾄ ｻｰﾊﾞｰ ｼｽﾃﾑの種々のｺﾝﾎﾟｰﾈﾝﾄは 3 階層のｻｰﾋﾞｽに分けられます。 ﾕｰｻﾞｰ ｻｰﾋﾞｽ、ﾋﾞｼﾞﾈｽその他中間階層ｻｰﾋﾞｽ、ﾃﾞｰﾀ ｻｰﾋﾞｽは、ｱﾌﾟﾘｹｰｼｮﾝ中で協調する論理階層です。"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object TierView "ﾕｰｻﾞｰ ｻｰﾋﾞｽ" @16
+			label      	(object ItemLabel
+			    Parent_View 	@16
+			    location   	(6, 6)
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"ﾕｰｻﾞｰ ｻｰﾋﾞｽ")
+			icon_style 	"Icon"
+			hidden     	TRUE
+			quidu      	"47B0A1F802E5"
+			width      	300
+			height     	180)
+		    (object TierView "ﾋﾞｼﾞﾈｽ ｻｰﾋﾞｽ" @17
+			location   	(600, 0)
+			label      	(object ItemLabel
+			    Parent_View 	@17
+			    location   	(606, 6)
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"ﾋﾞｼﾞﾈｽ ｻｰﾋﾞｽ")
+			icon_style 	"Icon"
+			hidden     	TRUE
+			quidu      	"47B0A1F802E7"
+			width      	300
+			height     	180)
+		    (object TierView "ﾃﾞｰﾀ ｻｰﾋﾞｽ" @18
+			location   	(1200, 0)
+			label      	(object ItemLabel
+			    Parent_View 	@18
+			    location   	(1206, 6)
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"ﾃﾞｰﾀ ｻｰﾋﾞｽ")
+			icon_style 	"Icon"
+			hidden     	TRUE
+			quidu      	"47B0A1F802E9"
+			width      	300
+			height     	180)))))
+    root_subsystem 	(object SubSystem "ｺﾝﾎﾟｰﾈﾝﾄ ﾋﾞｭｰ"
+	quid       	"47B0A1F80107"
+	physical_models 	(list unit_reference_list
+	    (object module "OfxCore" "NotAModuleType" "NotAModulePart"
+		attributes 	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"ProjectFile"
+			value      	"E:\\Documents and Settings\\takaya\\デスクトップ\\OFX\\ofx\\MainLogic\\OfxCore.vbp"))
+		quid       	"47B0A217028F"
+		stereotype 	"ActiveX DLL"
+		language   	"Visual Basic"))
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"47B0A1F802C7"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ModView "ｺﾝﾎﾟｰﾈﾝﾄ ﾋﾞｭｰ::OfxCore" "NotAModuleType" "NotAModulePart" @19
+			location   	(256, 256)
+			label      	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(182, 269)
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	280
+			    label      	"OfxCore")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(182, 212)
+			    anchor     	10
+			    anchor_loc 	3
+			    nlines     	1
+			    max_width  	276
+			    label      	"<<ActiveX DLL>>")
+			icon       	"ActiveX DLL"
+			icon_style 	"Icon"
+			quidu      	"47B0A217028F"
+			width      	504
+			autoResize 	TRUE
+			width      	504
+			height     	162)))))
+    process_structure 	(object Processes
+	quid       	"47B0A1F80108"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "配置ﾋﾞｭｰ"
+		quid       	"47B0A1F8010A"
+		title      	"配置ﾋﾞｭｰ"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"Repository"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"SourceSafe"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"TypeLibImporter"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"VC++"
+		name       	"propertyId"
+		value      	"809135966")
+	    (object Attribute
+		tool       	"VC++"
+		name       	"default__Class"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"VC++"
+			name       	"Generate"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"VC++"
+			name       	"HeaderFile"
+			value      	"AUTO GENERATE")))
+	    (object Attribute
+		tool       	"VC++"
+		name       	"default__Operation"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"VC++"
+			name       	"OperationIsConst"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"VC++"
+			name       	"OperationKindSet"
+			value      	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"Non-virtual"
+				value      	200)
+			    (object Attribute
+				tool       	"VC++"
+				name       	"Abstract"
+				value      	201)
+			    (object Attribute
+				tool       	"VC++"
+				name       	"Virtual"
+				value      	202)))
+		    (object Attribute
+			tool       	"VC++"
+			name       	"OperationKind"
+			value      	("OperationKindSet" 200))))
+	    (object Attribute
+		tool       	"VC++"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"VJ++"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"propertyId"
+		value      	"783606378")
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"default__Class"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"CreatableSet"
+			value      	(list Attribute_Set
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Private"
+				value      	221)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"PublicNotCreatable"
+				value      	213)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"SingleUse"
+				value      	214)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"GlobalSingleUse"
+				value      	215)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"MultiUse"
+				value      	219)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"GlobalMultiUse"
+				value      	220)))
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"OptionBase"
+			value      	"0")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"OptionExplicit"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"OptionCompare"
+			value      	("CompareSet" 202))
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"Creatable"
+			value      	("CreatableSet" 221))
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateInitialization"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateTermination"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"CollectionClass"
+			value      	"Collection")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"CompareSet"
+			value      	(list Attribute_Set
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"None"
+				value      	202)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Binary"
+				value      	203)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Text"
+				value      	204)))))
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"default__Operation"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"OperationName"
+			value      	"$operation")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"LibraryName"
+			value      	"")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"AliasName"
+			value      	"")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"IsStatic"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"EntryCode"
+			value      	(value Text ""))
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"ExitCode"
+			value      	(value Text ""))))
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"default__Attribute"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"IsConst"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"New"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"WithEvents"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"Subscript"
+			value      	"")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"NameIfUnlabeled"
+			value      	"the$supplier")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateDataMember"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"DataMemberName"
+			value      	"$relationship")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateGetOperation"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateSetOperation"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateLetOperation"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"default__Role"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"New"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"WithEvents"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"Subscript"
+			value      	"")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"NameIfUnlabeled"
+			value      	"the$supplier")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateDataMember"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"DataMemberName"
+			value      	"$relationship")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateGetOperation"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateSetOperation"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateLetOperation"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"default__Inherit"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"ImplementsDelegation"
+			value      	TRUE)))
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"default__Module-Spec"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"ProjectFile"
+			value      	"")))
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"VisualStudio"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"47B0A1F80109"))
